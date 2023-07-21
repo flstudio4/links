@@ -3,6 +3,7 @@
 body {
   padding-top: 40px;
   padding-bottom: 40px;
+  background-color: #004643;
 }
 
 .banner-image {
@@ -10,4 +11,43 @@ body {
   height: 128px;
   border-radius: 128px;
   border: solid cornflowerblue 4px;
+}
+
+.link img {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  object-fit: cover;
+}
+
+.name {
+  color: #fffffe;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2em;
+}
+
+.link a{
+  text-decoration: none;
+  font-size: 1.4em;
+  color: black;
+}
+.link a:hover {
+  color: blue;
+  
+  font-family:Arial, Helvetica, sans-serif
+}
+
+.link {
+  border: solid red 2px;
+  border-radius: 50px;
+  margin: 20px auto;
+  width: 50%;
+}
+
+footer {
+  width: 50%;
+  margin: 100px auto;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
 }
