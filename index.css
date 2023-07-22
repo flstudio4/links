@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: "Sony Sketch";
-  src: url(/Sony-Sketch-EF.ttf) format('ttf'),
-  url(/Sony-Sketch-EF.ttf.woff) format('woff');
+  src: url(../Sony-Sketch-EF.ttf) format('ttf'),
+  url(../Sony-Sketch-EF.ttf.woff) format('woff');
 }
 
 @font-face {
   font-family: "billieBarred";
-  src: url(/billiebarred.woff) format('woff'),
-  url(/billiebarred.ttf) format('ttf');
+  src: url(../billiebarred.woff) format('woff'),
+  url(../billiebarred.ttf) format('ttf');
 }
 
 html {
