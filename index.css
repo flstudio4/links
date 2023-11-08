@@ -1,5 +1,17 @@
 @charset "utf-8";
 
+@keyframes gradientBG {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
 @font-face {
   font-family: "Sony Sketch";
   src: url(./Sony-Sketch-EF.ttf) format('ttf'),
@@ -13,14 +25,24 @@
 }
 
 html {
-  background-image: linear-gradient(to top right, azure, darkgray);
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 body {
-  padding-top: 50px;
-  padding-bottom: 50px;
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  animation: gradientBG 8s ease infinite;
+  background: linear-gradient(-45deg, #ee7751, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  min-height: 100vh;
 }
 
 .banner {
@@ -42,6 +64,21 @@ body {
   object-fit: cover;
 }
 
+.link img {
+  transition: transform 0.3s;
+}
+
+.link:hover img,
+.link:focus-within img {
+  transform: translateX(0px) rotate(25deg);
+}
+
+
+.link:hover .link,
+.link:focus-within .link {
+  animation: pulse 1s infinite;
+}
+
 .name {
   color: cornflowerblue;
   font-family: "Sony Sketch", Verdana, Geneva, sans-serif;
@@ -58,8 +95,19 @@ body {
   color: azure;
   text-align: center;
   flex-grow: 1;
-  
+
 }
+
+.link a {
+  transition: text-shadow 0.3s, box-shadow 0.3s;
+}
+
+.link a:hover,
+.link a:focus {
+  text-shadow: 0 0 10px azure, 0 0 20px azure;
+
+}
+
 
 .link {
   border: solid cornflowerblue 2px;
@@ -85,4 +133,61 @@ body {
   gap: 10px;
   max-width: 640px;
   width: 50%;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+  }
+
+  .banner-image {
+    width: 96px;
+    height: 96px;
+    border-radius: 96px;
+  }
+
+  .link img {
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+  }
+
+  .name {
+    font-size: 2em;
+  }
+
+  .link {
+    margin: 10px auto;
+    padding: 5px;
+    width: 90%;
+  }
+
+  .items {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+  }
+
+  .link img {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+  }
+
+  .name {
+    font-size: 1.5em;
+  }
+
+  .link a {
+    font-size: 1.2em;
+  }
 }
