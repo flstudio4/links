@@ -51,6 +51,7 @@ body {
 }
 
 .banner-image {
+  margin-top: 25px;
   width: 128px;
   height: 128px;
   border-radius: 128px;
